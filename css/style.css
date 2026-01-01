@@ -62,6 +62,9 @@
   --radius-lg: 24px;
   --radius-xl: 32px;
   
+  /* Asset paths */
+  --noise-texture: url('../assets/images/noise.png');
+  
   /* Shadows */
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
   --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.2);
@@ -336,7 +339,7 @@ img {
 .hero__noise {
   position: absolute;
   inset: 0;
-  background-image: url('../assets/images/noise.png');
+  background-image: var(--noise-texture);
   background-repeat: repeat;
   opacity: 0.03;
   pointer-events: none;
@@ -593,7 +596,7 @@ img {
 .artwork__grain {
   position: absolute;
   inset: 0;
-  background-image: url('../assets/images/noise.png');
+  background-image: var(--noise-texture);
   background-repeat: repeat;
   opacity: 0.04;
   pointer-events: none;

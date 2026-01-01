@@ -112,7 +112,7 @@ const SmileUniverse = (function() {
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     
     // Set initial theme
-    state.theme = savedTheme || (prefersDark ? 'dark' : 'dark');
+    state.theme = savedTheme || (prefersDark ? 'dark' : 'light');
     applyTheme(state.theme);
 
     // Theme toggle button

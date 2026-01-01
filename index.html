@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Smile Universe - A digital art installation showcasing the beauty of a smile">
+  <meta name="theme-color" content="#0a0a0a">
+  <title>Smile Universe</title>
+  
+  <!-- Preload critical assets -->
+  <link rel="preload" href="css/style.css" as="style">
+  <link rel="preload" href="assets/images/selfie.webp" as="image" type="image/webp">
+  
+  <!-- Fonts - Using Inter (clean sans-serif) and Playfair Display (elegant display) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Loading overlay -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__content">
+      <span class="loader__text">Smile Universe</span>
+      <div class="loader__bar">
+        <div class="loader__progress"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Custom cursor -->
+  <div class="cursor" id="cursor" aria-hidden="true">
+    <div class="cursor__dot"></div>
+    <div class="cursor__ring"></div>
+  </div>
+
+  <!-- Main content -->
+  <main class="main" id="main">
+    <!-- Hero section -->
+    <section class="hero" id="hero">
+      <!-- Animated background gradient -->
+      <div class="hero__background" aria-hidden="true">
+        <div class="hero__gradient"></div>
+        <div class="hero__noise"></div>
+      </div>
+
+      <!-- Header with branding -->
+      <header class="header">
+        <div class="header__brand">
+          <span class="header__logo" aria-label="Smile Universe">✦</span>
+          <span class="header__title">Smile Universe</span>
+        </div>
+        <nav class="header__nav" aria-label="Main navigation">
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode" type="button">
+            <span class="theme-toggle__icon theme-toggle__icon--sun">☀</span>
+            <span class="theme-toggle__icon theme-toggle__icon--moon">☾</span>
+          </button>
+        </nav>
+      </header>
+
+      <!-- Central artwork container -->
+      <div class="artwork" id="artwork">
+        <!-- Glassmorphism frame -->
+        <div class="artwork__frame">
+          <!-- Glow effects -->
+          <div class="artwork__glow" aria-hidden="true"></div>
+          
+          <!-- Light reflection overlay -->
+          <div class="artwork__reflection" aria-hidden="true"></div>
+          
+          <!-- The image container (1:1 square) -->
+          <div class="artwork__container">
+            <picture>
+              <source srcset="assets/images/selfie.webp" type="image/webp">
+              <img 
+                src="assets/images/selfie.jpg" 
+                alt="A warm, genuine smile - the centerpiece of Smile Universe" 
+                class="artwork__image" 
+                id="heroImage"
+                loading="lazy"
+                decoding="async"
+              >
+            </picture>
+            
+            <!-- Film grain overlay -->
+            <div class="artwork__grain" aria-hidden="true"></div>
+          </div>
+        </div>
+
+        <!-- Caption below artwork -->
+        <figcaption class="artwork__caption">
+          <span class="artwork__caption-text">A moment of joy</span>
+          <span class="artwork__caption-year">2024</span>
+        </figcaption>
+      </div>
+
+      <!-- Scroll indicator -->
+      <div class="scroll-indicator" id="scrollIndicator" aria-hidden="true">
+        <span class="scroll-indicator__text">Scroll</span>
+        <div class="scroll-indicator__line"></div>
+      </div>
+    </section>
+
+    <!-- About section (scrollable content) -->
+    <section class="about" id="about">
+      <div class="about__content">
+        <h2 class="about__title">The Art of a Smile</h2>
+        <p class="about__text">
+          Every smile tells a story. This digital canvas represents one square meter of pure human emotion — 
+          a fleeting moment captured and celebrated.
+        </p>
+        <div class="about__actions">
+          <button class="share-button" id="shareButton" type="button" aria-label="Copy link to share">
+            <span class="share-button__icon">↗</span>
+            <span class="share-button__text">Share</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p class="footer__text">© 2024 Smile Universe. All rights reserved.</p>
+    </footer>
+  </main>
+
+  <!-- Scripts -->
+  <script src="js/animations.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
